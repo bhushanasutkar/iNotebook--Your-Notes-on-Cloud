@@ -19,7 +19,7 @@ function App() {
         <Router>
           <Navbar/>
           <Alert message="This is alert"/>
-          <div className="container">
+          <div className="container my-5">
           <Switch>
             <Route exact path="/about">
               <About/>
