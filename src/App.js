@@ -8,17 +8,17 @@ import {
 import { About } from './components/About';
 import { Home } from './components/Home';
 import NoteState from './contexapi/NoteState';
-import Alert from './components/Alert';
+
 import Login from './components/Login';
 import Signup from './components/Signup';
-
+document.body.style.backgroundColor = 'rgb(157 132 160)';
 function App() {
   return (
     <>
       <NoteState>
         <Router>
           <Navbar/>
-          <Alert message="This is alert"/>
+          
           <div className="container my-5">
           <Switch>
             <Route exact path="/about">

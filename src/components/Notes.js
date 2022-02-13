@@ -21,7 +21,7 @@ const Notes = () => {
     }
     // eslint-disable-next-line
     }, [])
-    const  [Note, setNote] = useState({id:"",etitle:"",edescription:"",etag:" Tag"})
+    const  [Note, setNote] = useState({id:"",etitle:"",edescription:"",etag:""})
     
     const handleclick=(e)=>{
         editnote(Note.id,Note.etitle,Note.edescription,Note.etag)
@@ -51,7 +51,7 @@ const Notes = () => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Edit Note</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">Edit Event</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
@@ -71,15 +71,15 @@ const Notes = () => {
                         </div>
                         <div className="modal-footer">
                             <button ref={refclose}type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button  disabled={Note.etitle.length<5||Note.edescription.length<5} type="button"onClick={handleclick} className="btn btn-primary">Update Note</button>
+                            <button  disabled={Note.etitle.length<5||Note.edescription.length<5} type="button"onClick={handleclick} className="btn btn-primary">Update Event</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="row my-3 mx-1">
-                <h1>Your Notes</h1>
+                <h1>Events List</h1>
                 <div className="container mx-2">
-                {notes.length===0 && 'No notes to display'}
+                {notes.length===0 && 'No events to display'}
                 </div>
                 {notes.map((note) => {
                   return <Noteitem key={note._id} updatenode={updatenode} note={note} />

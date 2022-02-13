@@ -6,8 +6,8 @@ const Noteitem = (props) => {
     const { deletenote } = context;
     const {note,updatenode}= props;
     return (
-        <div className="col-md-4">
-        <div className="card mx-1 my-3">
+        <div className="col-md-4 mx-2 my-3" style={{backgroundColor:"#1c111f"}}>
+        <div className="card mx-1 my-3 text-light" style={{backgroundColor:"#350b2c"}}>
 
             <div className="card-body">
                 <h5 className="card-title">{note.title}</h5>

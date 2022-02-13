@@ -18,7 +18,7 @@ export const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">iNotebook Cloud</Link>
+          <Link className="navbar-brand" to="/">iDo Events</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -27,14 +27,14 @@ export const Navbar = () => {
               <li className="nav-item">
                 <Link className={`nav-link ${location.pathname==='/'?'active':""}`} aria-current="page" to="/">Home</Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className={`nav-link ${location.pathname==='/about'?'active':""}`} to="/about">About</Link>
-              </li>
+              </li> */}
             </ul>
             {! localStorage.getItem('token')?  <form className="d-flex">
-            <Link className="btn btn-primary mx-1" to="/login" role="button">Login</Link>
-            <Link className="btn btn-primary mx-1" to="/signup" role="button">Sign Up</Link>
-            </form>:<button className="btn btn-primary" onClick={handlelogout} >Logout</button>}
+            <Link className="btn btn-primary mx-1" style={{background: "#947c35"}} to="/login" role="button">Login</Link>
+            <Link className="btn btn-primary mx-1" style={{background: "#947c35"}} to="/signup" role="button">Sign Up</Link>
+            </form>:<button className="btn btn-danger" onClick={handlelogout} >Logout</button>}
           </div>
         </div>
       </nav>

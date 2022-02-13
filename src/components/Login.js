@@ -33,15 +33,15 @@ const Login = () => {
             <form onSubmit={handlesubmit}>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
-                    <input type="email" onChange={handleonchange} className="form-control" value={credentials.email} name="email" id="email" aria-describedby="emailHelp" />
+                    <input type="email" style={{backgroundColor:"rgb(176 161 180)"}}  onChange={handleonchange} className="form-control" value={credentials.email} name="email" id="email" aria-describedby="emailHelp" />
 
                 </div>
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" onChange={handleonchange} className="form-control" value={credentials.password} name="password" id="password" />
+                    <input type="password" style={{backgroundColor:"rgb(176 161 180)"}} onChange={handleonchange} className="form-control" value={credentials.password} name="password" id="password" />
                 </div>
 
-                <button type="submit" onSubmit={handlesubmit} className="btn btn-primary">Submit</button>
+                <button type="submit" onSubmit={handlesubmit} style={{backgroundColor:"#2d172f"}} className="btn btn-primary">Submit</button>
             </form>
         </div>
     )
